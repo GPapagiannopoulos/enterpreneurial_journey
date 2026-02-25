@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Button from "../components/Button"
-import InputField from "../components/TextField";
+import InputField from "../components/InputField";
 import { useNavigate } from "react-router-dom"
 import { authenticateUser } from "../api/auth";
+import type { loginCredentials } from "../api/types";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -14,9 +15,14 @@ export default function Login() {
     const handleSubmission = async (e: React.SubmitEvent) => {
         e.preventDefault();
         setError(null);
-
+        
+        const userCredentials: loginCredentials = {
+            email: email,
+            password: password
+        }
+        
         try {
-            const token = await authenticateUser(email, password);
+            const token = await authenticateUser(userCredentials);
             localStorage.setItem('authToken', token);
             navigate('/dashboard');
         } catch (err) {

@@ -1,11 +1,11 @@
 import React, { type ReactHTMLElement } from 'react'
 
 interface InputFieldProps {
-    label: string,
-    type : 'text' | 'password' | 'email',
-    value: string,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    required?: boolean
+    label: string;
+    type : 'text' | 'password' | 'email' | 'date';
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    required?: boolean;
 }
 
 export default function InputField({label, type, value, onChange, required = false}: InputFieldProps) {
