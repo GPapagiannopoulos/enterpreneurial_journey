@@ -33,7 +33,7 @@ export default function Signup() {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            dateOfBirth: dob
+            dob: dob
         }
 
         try {
@@ -48,6 +48,7 @@ export default function Signup() {
     return (
         <main className="registration-container">
             <h2>Account Registration</h2>
+            <form onSubmit={RegisterUser}>
             <InputField
             label="First Name"
             type="text"
@@ -92,6 +93,8 @@ export default function Signup() {
             />
             {error && <div className='error-name'>{error}</div>}
             <Button label="Sign-Up" onClick = { () => {}} variant='primary' />
+            <Button label="Log In" onClick = { () => navigate('/login')} variant='primary'/>
+            </form>
         </main>
-    )
+    );
 }

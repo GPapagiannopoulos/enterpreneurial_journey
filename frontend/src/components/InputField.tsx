@@ -1,4 +1,4 @@
-import React, { type ReactHTMLElement } from 'react'
+import React from 'react'
 
 interface InputFieldProps {
     label: string;
