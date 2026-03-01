@@ -24,8 +24,10 @@ export default function Catalogue() {
   }, []);
 
   if (isLoading)
-    return <div className="loading-banner"> Loading projects...</div>;
+    return <div className="p-8 text-center">Loading infrastructure...</div>;
   if (error) return <div className="error">System Failure: {error}</div>;
+  if (error)
+    return <div className="p-8 text-red-500">System Failure: {error}</div>;
 
   return (
     <main className="p-6">
