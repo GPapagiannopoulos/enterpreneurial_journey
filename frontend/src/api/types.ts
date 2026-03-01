@@ -2,7 +2,7 @@ export interface newUserPayload {
     firstName: string;
     lastName: string;
     email : string;
-    dateOfBirth: string; //ISO format
+    dob: string; //ISO format
 }
 
 export interface loginCredentials {
