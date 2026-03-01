@@ -7,29 +7,36 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
-    allow_credentials=True, 
+    allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
+
+
 class loginCredentials(BaseModel):
-    email:str
-    password:str
+    email: str
+    password: str
+
 
 class newUserPayload(BaseModel):
-    firstName:str
-    lastName:str
-    email:str
-    dob:str
+    firstName: str
+    lastName: str
+    email: str
+    dob: str
+
 
 @app.post("/api/auth/login")
-async def authenticate_user(credentials: loginCredentials):
-    # Mock login information for the time being 
-    if (credentials.email == "test@email.com"):
+async def authenticate_user(
+    credentials: loginCredentials,
+) -> dict[str, str] | HTTPException:
+    # Mock login information for the time being
+    if credentials.email == "test@email.com":
         return {"status": "success", "message": "Successful login"}
     raise HTTPException(status_code=400, detail="Email address not found")
 
+
 @app.post("/api/auth/signup")
-async def signup_user(payload: newUserPayload):
-    if (payload.email == "test@email.com"):
+async def signup_user(payload: newUserPayload) -> dict[str, str] | HTTPException:
+    if payload.email == "test@email.com":
         raise HTTPException(status_code=400, detail="Email address already in use!")
     return {"status": "success", "message": "User not added successfully"}

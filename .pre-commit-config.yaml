@@ -9,4 +9,15 @@ repos:
   rev: v1.19.1
   hooks:
   - id: mypy 
+    additional_dependencies: 
+      - pydantic
+      - fastapi
     args: [ --strict, --ignore-missing-imports ]
+- repo: local
+  hooks:
+  - id: eslint 
+    name: eslint
+    entry: npm run lint --prefix frontend
+    language: system 
+    pass_filenames: false
+    files: ^frontend/.*\,(ts|tsx)$
