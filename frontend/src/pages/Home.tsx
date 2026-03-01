@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <main className="landing-container">
-            <h1>Landing Page</h1>
+            <h1>Welcome Page</h1>
             <div className="action-group">
                 <Button label="log-in" onClick={handleLogin} variant='primary'></Button>
                 <Button label="sign-up" onClick={handleSignUp} variant='secondary'></Button>
