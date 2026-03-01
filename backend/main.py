@@ -28,7 +28,7 @@ class newUserPayload(BaseModel):
 @app.post("/api/auth/login")
 async def authenticate_user(
     credentials: loginCredentials,
-) -> dict[str, str] | HTTPException:
+) -> dict[str, str]:
     # Mock login information for the time being
     if credentials.email == "test@email.com":
         return {"status": "success", "message": "Successful login"}
@@ -36,7 +36,7 @@ async def authenticate_user(
 
 
 @app.post("/api/auth/signup")
-async def signup_user(payload: newUserPayload) -> dict[str, str] | HTTPException:
+async def signup_user(payload: newUserPayload) -> dict[str, str]:
     if payload.email == "test@email.com":
         raise HTTPException(status_code=400, detail="Email address already in use!")
     return {"status": "success", "message": "User not added successfully"}
