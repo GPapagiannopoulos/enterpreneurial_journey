@@ -18,3 +18,5 @@ line-ending = "auto"
 
 [tool.mypy]
 plugins = [ "pydantic.mypy" ]
+files = ["backend"]
+exclude = ["^frontend/", "*node_modules*"]

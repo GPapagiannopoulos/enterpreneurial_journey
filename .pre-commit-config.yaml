@@ -13,6 +13,7 @@ repos:
       - pydantic
       - fastapi
     args: [ --strict, --ignore-missing-imports ]
+    files: ^backend/
 - repo: local
   hooks:
   - id: eslint 
@@ -21,3 +22,9 @@ repos:
     language: system 
     pass_filenames: false
     files: ^frontend/.*\.(ts|tsx)$
+  - id: prettier 
+    name: prettier 
+    entry: npm run format --prefix frontend 
+    language: system 
+    pass_filenames: false 
+    files: ^frontend/.*\.(ts|tsx|js|jsx|json|css|md|html)$

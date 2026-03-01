@@ -1,5 +1,5 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from "./pages/Home.tsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.tsx";
 import Login from "./pages/login.tsx";
 import Signup from "./pages/signup.tsx";
 export default function App() {
