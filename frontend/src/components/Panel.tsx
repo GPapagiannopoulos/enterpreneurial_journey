@@ -1,5 +1,5 @@
 import ProgressBar from "./ProgressBar";
-import type { ProjectDetails } from "../api/Project";
+import type { ProjectDetails } from "../api/types";
 
 interface ProjectPanelProps {
   project: ProjectDetails;
