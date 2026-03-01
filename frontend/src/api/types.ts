@@ -3,6 +3,7 @@ export interface newUserPayload {
   lastName: string;
   email: string;
   dob: string; //ISO format
+  password: string;
 }
 
 export interface loginCredentials {
