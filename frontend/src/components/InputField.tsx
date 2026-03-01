@@ -16,13 +16,14 @@ export default function InputField({
   required = false,
 }: InputFieldProps) {
   return (
-    <div className="input-group">
-      <label>{label}</label>
+    <div className="flex flex-col gap-1.5 w-full mb-4">
+      <label className="text-sm font-semibold text-gray-700">{label}</label>
       <input
         type={type}
         value={value}
         onChange={onChange}
         required={required}
+        className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
       />
     </div>
   );
