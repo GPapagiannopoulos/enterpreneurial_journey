@@ -20,4 +20,4 @@ repos:
     entry: npm run lint --prefix frontend
     language: system 
     pass_filenames: false
-    files: ^frontend/.*\,(ts|tsx)$
+    files: ^frontend/.*\.(ts|tsx)$
