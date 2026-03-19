@@ -1,23 +1,25 @@
-import Button from "../components/Button";
-import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import HeroSection from "../sections/Home/HeroSection";
+import TaglineSection from "../sections/Home/TaglineSection";
+import FeaturesSection from "../sections/Home/FeatureSection";
+import StatsSection from "../sections/Home/StatsSection";
+import HowItWorksSection from "../sections/Home/HowItWorksSection";
+import ForEveryInvestorSection from "../sections/Home/ForEveryInvestorSection";
+import CTASection from "../sections/Home/CTASection";
+import RegisterInterest from "../sections/Home/RegisterInterest";
 
 export default function Home() {
-  const navigate = useNavigate();
-
-  const handleLogin = () => navigate("/login");
-  const handleSignUp = () => navigate("/signup");
-
   return (
-    <main className="landing-container">
-      <h1>Welcome Page</h1>
-      <div className="action-group">
-        <Button label="log-in" onClick={handleLogin} variant="primary"></Button>
-        <Button
-          label="sign-up"
-          onClick={handleSignUp}
-          variant="secondary"
-        ></Button>
-      </div>
-    </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <TaglineSection />
+      <FeaturesSection />
+      <StatsSection />
+      <HowItWorksSection />
+      <ForEveryInvestorSection />
+      <CTASection />
+      <RegisterInterest />
+    </div>
   );
 }
