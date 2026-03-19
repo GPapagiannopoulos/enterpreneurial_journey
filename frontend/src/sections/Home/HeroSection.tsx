@@ -29,7 +29,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
-        <div className="bg-white rounded-2x1 shadow-xl p-6 w-120 border border-gray-200">
+        <div className="bg-white rounded-2xl shadow-xl p-6 w-120 border border-gray-200">
           <p className="text-4xl font-extrabold text-gray-900 mb-1">
             Build a Solar Farm
           </p>
