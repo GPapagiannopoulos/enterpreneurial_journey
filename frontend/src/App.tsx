@@ -6,7 +6,7 @@ import Catalogue from "./pages/Catalogue.tsx";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/enterpreneurial_journey/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
