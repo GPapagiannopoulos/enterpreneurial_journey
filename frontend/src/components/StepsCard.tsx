@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface StepsCardProps {
   stepNumber: number;
   emoji: string;

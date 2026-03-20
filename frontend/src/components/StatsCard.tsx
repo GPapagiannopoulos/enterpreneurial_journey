@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface StatsCardProps {
   metric: string;
   label: string;

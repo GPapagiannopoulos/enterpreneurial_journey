@@ -1,4 +1,5 @@
-import { useState, SubmitEventHandler } from "react";
+import { useState } from "react";
+import type { SubmitEventHandler } from "react";
 import Button from "../components/Button";
 import InputField from "../components/InputField";
 import { useNavigate } from "react-router-dom";

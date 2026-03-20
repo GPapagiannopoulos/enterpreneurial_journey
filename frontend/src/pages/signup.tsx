@@ -1,4 +1,5 @@
-import { useState, SubmitEventHandler } from "react";
+import { useState } from "react";
+import type { SubmitEventHandler } from "react";
 import { useNavigate } from "react-router-dom";
 import { registerNewUser } from "../api/auth";
 import type { newUserPayload } from "../api/types";
