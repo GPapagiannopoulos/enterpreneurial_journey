@@ -6,7 +6,6 @@ import StatsSection from "../sections/Home/StatsSection";
 import HowItWorksSection from "../sections/Home/HowItWorksSection";
 import ForEveryInvestorSection from "../sections/Home/ForEveryInvestorSection";
 import CTASection from "../sections/Home/CTASection";
-import RegisterInterest from "../sections/Home/RegisterInterest";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <HowItWorksSection />
       <ForEveryInvestorSection />
       <CTASection />
-      <RegisterInterest />
     </div>
   );
 }
