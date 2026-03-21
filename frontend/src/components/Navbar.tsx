@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-16 py-4 bg-white shadow-sm">
-      <span className="text-xl font-bold text-green-700">Noverta</span>
+      <span className="text-3xl font-bold text-green-700">Noverta</span>
 
       <div className="flex gap-12">
         <Button
@@ -15,8 +15,8 @@ export default function Navbar() {
           variant="secondary"
         />
         <Button
-          label="How it Works"
-          onClick={() => navigate("/howitworks")}
+          label="About Us"
+          onClick={() => navigate("/aboutus")}
           variant="secondary"
         />
         <Button
