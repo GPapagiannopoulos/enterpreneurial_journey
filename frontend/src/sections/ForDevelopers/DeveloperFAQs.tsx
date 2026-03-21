@@ -34,10 +34,13 @@ export default function DeveloperFAQs() {
 
   return (
     <section>
+      <h2 className="font-bold text-3xl mx-14 my-8">
+        Frequently Asked Questions
+      </h2>
       {FAQs.map((FAQ, index) => (
         <div
           key={index}
-          className="border-gray-400 border-b-2 py-4 max-w-4xl mx-auto mb-8"
+          className="border-gray-400 border-b-2 py-4 max-w-5xl mx-auto mb-8"
         >
           <div className="flex justify-between items-center px-14">
             <h2 className="font-bold text-lg">{FAQ.question}</h2>
