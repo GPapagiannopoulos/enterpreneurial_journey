@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 export default function Navbar() {
@@ -6,8 +6,9 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-16 py-4 bg-white shadow-sm">
-      <span className="text-3xl font-bold text-green-700">Noverta</span>
-
+      <Link to="/">
+        <span className="text-3xl font-bold text-green-700">Noverta</span>
+      </Link>
       <div className="flex gap-12">
         <Button
           label="Explore"
@@ -21,12 +22,12 @@ export default function Navbar() {
         />
         <Button
           label="For Investors"
-          onClick={() => navigate("/investors")}
+          onClick={() => navigate("/forinvestors")}
           variant="secondary"
         />
         <Button
           label="For Developers"
-          onClick={() => navigate("/developers")}
+          onClick={() => navigate("/fordevelopers")}
           variant="secondary"
         />
         <Button
