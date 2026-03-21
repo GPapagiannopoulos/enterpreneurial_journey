@@ -1,3 +1,9 @@
 export default function FinancingChallenge() {
-  return <section></section>;
+  return (
+    <section>
+      <div>
+        <h2></h2>
+      </div>
+    </section>
+  );
 }
