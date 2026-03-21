@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ProjectPanel from "../components/Panel";
+import ProjectPanel from "../components/ProjectPanel";
 import { retrieveProjects } from "../api/Project";
 import type { ProjectDetails } from "../api/types";
 import Navbar from "../components/Navbar";
@@ -44,7 +44,7 @@ export default function Explore() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [energyTypes, setEnergyTypes] = useState<Set<string>>(new Set());
-  //const [minExpectedReturn, setExpectedReturn] = useState<number>(0);
+  const [minExpectedReturn, setExpectedReturn] = useState<number>(0);
   const [projectStages, setProjectStages] = useState<Set<string>>(new Set());
 
   useEffect(() => {
@@ -115,6 +115,23 @@ export default function Explore() {
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
               EXPECTED RETURN
             </h2>
+            <div className="bg-gray-50 p-4 rounded-lg mb-4 border border-gray-100">
+              <div className="flex justify-between text-sm mb-2">
+                <span className="font-semibold text-gray-800">0%</span>
+                <span className="font-semibold text-gray-800">15%</span>
+              </div>
+              <div>
+                <input
+                  type="range"
+                  min={0}
+                  max={15}
+                  step={0.5}
+                  value={minExpectedReturn}
+                  onChange={(e) => setExpectedReturn(Number(e.target.value))}
+                  className="w-full accent-green-600"
+                />
+              </div>
+            </div>
           </div>
           <div className="bg-white shadow-sm p-4 rounded-lg">
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
