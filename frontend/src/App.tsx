@@ -7,7 +7,7 @@ import ForDevelopers from "./pages/ForDevelopers.tsx";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/enterpreneurial_journey/">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
