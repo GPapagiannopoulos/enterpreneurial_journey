@@ -26,7 +26,7 @@ export default function EligibleProjects() {
           <h3 className="font-bold">Technology Types</h3>
           <div className="flex flex-wrap gap-2">
             {EnergyTypes.map((type) => (
-              <div className="flex items-center gap-2 m-4">
+              <div key={type} className="flex items-center gap-2 m-4">
                 <span className="border border-gray-200 rounded-full text-sm px-3 py-1">
                   {type}
                 </span>
@@ -38,7 +38,7 @@ export default function EligibleProjects() {
           <h3 className="font-bold">Development Stages</h3>
           <div className="flex flex-wrap gap-2">
             {DevelopmentStages.map((stage) => (
-              <div className="flex items-center gap-2 m-4">
+              <div key={stage} className="flex items-center gap-2 m-4">
                 <span className="border border-gray-200 rounded-full text-sm px-3 py-1">
                   {stage}
                 </span>
