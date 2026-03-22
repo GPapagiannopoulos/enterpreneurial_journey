@@ -12,14 +12,10 @@ export default function FinancingChallenge() {
       <button
         className="font-bold"
         onClick={() => {
-          if (isSectionExpanded) {
-            setIsSectionExpanded(false);
-          } else {
-            setIsSectionExpanded(true);
-          }
+          setIsSectionExpanded(!isSectionExpanded);
         }}
       >
-        Read More
+        {isSectionExpanded ? "Read Less" : "Read More"}
       </button>
       <p
         className={`overflow-hidden transition-all duration-300 ease-in-out

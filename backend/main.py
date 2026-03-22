@@ -2,6 +2,12 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Any
+import mailchimp_marketing as MailchimpMarketing
+from mailchimp_marketing.api_client import ApiClientError
+from dotenv import load_dotenv
+import os
+
+load_dotenv(override=True)
 
 app = FastAPI()
 
@@ -11,6 +17,14 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+)
+
+client = MailchimpMarketing.Client()
+client.set_config(
+    {
+        "api_key": os.getenv("MAILCHIMP_API_KEY"),
+        "server": os.getenv("MAILCHIMP_SERVER_PREFIX"),
+    }
 )
 
 
@@ -24,6 +38,13 @@ class newUserPayload(BaseModel):
     lastName: str
     email: str
     dob: str
+
+
+class registrationPayload(BaseModel):
+    email_address: str
+    role: str
+    first_name: str
+    last_name: str
 
 
 @app.post("/api/auth/login")
@@ -83,3 +104,25 @@ async def fetch_project_catalogue() -> list[dict[str, Any]]:
             "expectedReturnPercentage": 6.5,
         },
     ]
+
+
+@app.post("/api/register_interest")
+def register_interest(payload: registrationPayload) -> dict[str, str]:
+    audience_id = os.getenv("MAILCHIMP_AUDIENCE_ID")
+
+    try:
+        client.lists.add_list_member(
+            audience_id,
+            {
+                "email_address": payload.email_address,
+                "status": "subscribed",
+                "tags": ["Investor"] if payload.role == "investor" else ["Developer"],
+                "merge_fields": {
+                    "FNAME": payload.first_name,
+                    "LNAME": payload.last_name,
+                },
+            },
+        )
+        return {"success": "200"}
+    except ApiClientError as e:
+        raise HTTPException(status_code=500, detail=e.text) from e
