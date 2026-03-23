@@ -14,6 +14,7 @@ export default function UpdateMe() {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -37,7 +38,7 @@ export default function UpdateMe() {
 
     try {
       await registerInterest(newUserInterest);
-      navigate("/");
+      setSuccess(true);
     } catch (error) {
       if (error instanceof Error) setError(error.message);
     }
@@ -103,6 +104,26 @@ export default function UpdateMe() {
                 {error}
               </div>
             )}
+
+            {success && (
+              <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-xl p-8 text-center max-w-sm">
+                  <h2 className="font-bold text-xl mb-2">
+                    You're on the list!
+                  </h2>
+                  <p className="text-gray-500 mb-6">
+                    We'll be in touch when we launch.
+                  </p>
+                  <button
+                    className="bg-gray-200 transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 hover:border-gray-300 border rounded-3xl py-1 px-6 my-1"
+                    onClick={() => navigate("/")}
+                  >
+                    Back to Home
+                  </button>
+                </div>
+              </div>
+            )}
+
             <div className="mt-12 text-center">
               <Button
                 label="Register Your Interest"
