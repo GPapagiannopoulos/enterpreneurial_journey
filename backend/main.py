@@ -41,10 +41,10 @@ class newUserPayload(BaseModel):
 
 
 class registrationPayload(BaseModel):
-    email_address: str
+    emailAddress: str
     role: str
-    first_name: str
-    last_name: str
+    firstName: str
+    lastName: str
 
 
 @app.post("/api/auth/login")
@@ -114,12 +114,12 @@ def register_interest(payload: registrationPayload) -> dict[str, str]:
         client.lists.add_list_member(
             audience_id,
             {
-                "email_address": payload.email_address,
+                "email_address": payload.emailAddress,
                 "status": "subscribed",
-                "tags": ["Investor"] if payload.role == "investor" else ["Developer"],
+                "tags": ["Investor"] if payload.role == "Investor" else ["Developer"],
                 "merge_fields": {
-                    "FNAME": payload.first_name,
-                    "LNAME": payload.last_name,
+                    "FNAME": payload.firstName,
+                    "LNAME": payload.lastName,
                 },
             },
         )
