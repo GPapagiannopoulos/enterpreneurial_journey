@@ -10,7 +10,7 @@ export default function HeroSection() {
         <div className="flex-1 space-y-6">
           <h1 className="text-6xl font-extrabold text-gray-900 leading-tight">
             Your Money <br />
-            Our Planet <br />
+            <span className="text-green-600">Our Planet</span>
           </h1>
           <p className="text-lg text-gray-500 max-w-md">
             Earn real returns while funding green energy projects that fight

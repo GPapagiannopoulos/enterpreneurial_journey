@@ -20,3 +20,10 @@ export interface ProjectDetails {
   raisedAmount: number;
   expectedReturnPercentage: number;
 }
+
+export interface registrationPayload {
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  role: string;
+}
