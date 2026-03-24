@@ -129,3 +129,8 @@ def register_interest(payload: registrationPayload) -> dict[str, str]:
         return {"success": "200"}
     except ApiClientError as e:
         raise HTTPException(status_code=500, detail=e.text) from e
+
+
+@app.get("/api/health")
+def health_check() -> dict[str, str]:
+    return {"status": "ok"}
