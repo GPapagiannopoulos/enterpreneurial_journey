@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className="flex flex-col items-center justify-between px-16 py-4 bg-white shadow-sm">
+    <nav className="flex flex-col items-center justify-between px-4 md:px-16 py-4 bg-white shadow-sm">
       <div className="flex justify-between items-center w-full">
         <Link to="/">
           <span className="text-3xl font-bold text-green-700">Noverta</span>

@@ -16,12 +16,12 @@ const DevelopmentStages: string[] = [
 
 export default function EligibleProjects() {
   return (
-    <section className="px-14 mt-14">
+    <section className="px-4 md:px-14 mt-8 md:mt-14">
       <h2 className="font-bold text-3xl">Eligible Projects</h2>
       <p className="font-light text-sm mb-4">
         We are here for you regardless of the energy type or development stage
       </p>
-      <div className="grid grid-cols-2 gap-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="border border-gray-200 shadow-2xs rounded-2xl p-4">
           <h3 className="font-bold">Technology Types</h3>
           <div className="flex flex-wrap gap-2">

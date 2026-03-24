@@ -43,8 +43,8 @@ export default function HowItWorksSection() {
           Four steps away from making an impact
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-8 max-w-4xl mx-auto items-stretch relative">
-        <div className="absolute top-1/3 left-0 right-0 h-1 bg-green-300 z-0" />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto px-4 md:px-0 items-stretch relative">
+        <div className="hidden md:block absolute top-1/3 left-0 right-0 h-1 bg-green-300 z-0" />
         {steps.map((step) => (
           <StepsCard key={step.stepNumber} {...step} />
         ))}

@@ -6,9 +6,9 @@ export default function HeroSection() {
 
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-18 py-20 flex flex-col lg:flex-row items-center gap-12">
-        <div className="flex-1 space-y-6">
-          <h1 className="text-6xl font-extrabold text-gray-900 leading-tight">
+      <div className="max-w-7xl mx-auto px-4 md:px-18 py-10 md:py-20 flex flex-col lg:flex-row items-center gap-6 md:gap-12">
+        <div className="flex-1 space-y-4 md:space-y-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
             Your Money <br />
             <span className="text-green-600">Our Planet</span>
           </h1>
@@ -29,8 +29,8 @@ export default function HeroSection() {
             />
           </div>
         </div>
-        <div className="bg-white rounded-2xl shadow-xl p-6 w-120 border border-gray-200">
-          <p className="text-4xl font-extrabold text-gray-900 mb-1">
+        <div className="bg-white rounded-2xl shadow-xl p-6 w-full md:w-120 border border-gray-200">
+          <p className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-1">
             Build a Solar Farm
           </p>
           <img
