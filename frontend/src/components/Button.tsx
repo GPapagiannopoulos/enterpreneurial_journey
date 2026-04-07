@@ -28,7 +28,7 @@ export default function Button({
     variant === "cta"
       ? ctaStyles
       : variant === "primary"
-        ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+        ? "bg-green-600 text-white hover:bg-blue-700 focus:ring-green-500"
         : "px-2 py-2 rounded-full text-black font-light font-raleway hover:text-[#27874F] focus:ring-[#27874F]";
 
   return (
