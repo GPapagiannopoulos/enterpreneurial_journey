@@ -28,20 +28,21 @@ export default function HeroSection() {
               Track your personal impact in real time.
             </span>
           </p>
-          <div className="mt-17.5 flex gap-6">
+          <div className="mt-17.5 flex items-center ">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 navigate("/updateme", { state: { email: emailAddress } });
               }}
+              className="inline-flex items-center gap-6"
             >
               <InputField
-                label="Enter your email"
+                placeholder="Enter your email"
                 type="text"
                 value={emailAddress}
                 onChange={(e) => setEmailAddress(e.target.value)}
               />
-              <Button label="Get Started" type="submit" variant="cta" />
+              <Button label="Get Started" type="submit" variant="primary" />
             </form>
           </div>
         </div>
