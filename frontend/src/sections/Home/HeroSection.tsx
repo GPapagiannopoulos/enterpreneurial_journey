@@ -6,17 +6,18 @@ export default function HeroSection() {
 
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-18 py-10 md:py-20 flex flex-col lg:flex-row items-center gap-6 md:gap-12">
-        <div className="flex-1 space-y-4 md:space-y-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-            Your Money <br />
-            <span className="text-green-600">Our Planet</span>
+      <div className="mt-82.5 mb-42.5 flex flex-col lg:flex-row items-center md:gap-12">
+        <div className=" pl-35 w-240.25 justify-start">
+          <h1 className="text-8xl text-black font-bold font-raleway leading-29 whitespace-nowrap">
+            Think long term,
+            <br />
+            invest <span className="text-green-700">green</span>.
           </h1>
-          <p className="text-lg text-gray-500 max-w-md">
+          <p className="mt-39 text-lg text-gray-500 max-w-md">
             Earn real returns while funding green energy projects that fight
             climate changes.
           </p>
-          <div className="flex gap-6">
+          <div className="mt-17.5 flex gap-6">
             <Button
               label="Invest Now"
               onClick={() => navigate("/updateme")}
