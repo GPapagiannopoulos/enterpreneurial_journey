@@ -9,7 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className="mx-35 h-25 flex bg-white border-b">
+    <nav className="h-25 flex bg-white border-b">
       <div className="flex justify-between items-center w-full">
         <Link to="/">
           <div className="flex items-center gap-3">

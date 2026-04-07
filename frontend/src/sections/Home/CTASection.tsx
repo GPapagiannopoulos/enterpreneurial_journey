@@ -6,7 +6,7 @@ export default function CTASection() {
 
   return (
     <section>
-      <div className="bg-linear-to-br from-green-800 to-green-500 max-w-2xl mx-4 md:mx-auto text-center rounded-2xl mb-12 p-6 md:p-8">
+      <div className="bg-linear-to-br from-green-800 to-green-500 max-w-2xl mx-auto text-center rounded-2xl mb-12 p-6 md:p-8">
         <h2 className="font-extrabold text-2xl md:text-4xl text-white leading-loose">
           Ready to Put Your Money Where Your{" "}
           <span className="bg-white text-green-700 rounded-xl p-2 mx-4">

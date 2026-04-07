@@ -91,7 +91,7 @@ export default function ForEveryInvestorSection() {
           <TrendingUp size={16} /> Return Focused
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10 px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
         {panelData[activeView].map((card) => (
           <div
             key={card.title}

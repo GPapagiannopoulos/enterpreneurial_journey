@@ -11,7 +11,7 @@ export default function HeroSection() {
   const [emailAddress, setEmailAddress] = useState<string>("");
 
   return (
-    <section className="bg-white mx-35">
+    <section className="bg-white">
       <div className="mt-82.5 pb-42.5 flex flex-col lg:flex-row items-center md:gap-12 border-b">
         <div className="w-240.25">
           <h1 className="text-8xl text-black font-bold font-raleway leading-29 whitespace-nowrap">
