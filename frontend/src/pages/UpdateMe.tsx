@@ -1,6 +1,6 @@
 import { useState, type SubmitEventHandler } from "react";
 import InputField from "../components/InputField";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import type { registrationPayload } from "../api/types";
 import { registerInterest } from "../api/auth";
 import Button from "../components/Button";
@@ -8,9 +8,12 @@ import Navbar from "../components/Navbar";
 
 export default function UpdateMe() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [role, setRole] = useState<string>("Investor");
-  const [emailAddress, setEmailAddress] = useState<string>("");
+  const [emailAddress, setEmailAddress] = useState<string>(
+    location.state?.email ?? "",
+  );
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [error, setError] = useState<string | null>(null);

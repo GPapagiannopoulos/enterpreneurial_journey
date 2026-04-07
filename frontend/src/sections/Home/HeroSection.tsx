@@ -29,14 +29,19 @@ export default function HeroSection() {
             </span>
           </p>
           <div className="mt-17.5 flex gap-6">
-            <form onSubmit={() => navigate("/")}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate("/updateme", { state: { email: emailAddress } });
+              }}
+            >
               <InputField
                 label="Enter your email"
                 type="text"
                 value={emailAddress}
                 onChange={(e) => setEmailAddress(e.target.value)}
               />
-              <Button label="Enter your email" type="submit" variant="cta" />
+              <Button label="Get Started" type="submit" variant="cta" />
             </form>
           </div>
         </div>
