@@ -28,7 +28,7 @@ export default function Navbar() {
           />
           <Button
             label="Learn"
-            onClick={() => navigate("/aboutus")}
+            onClick={() => navigate("/learn")}
             variant="secondary"
           />
           <Button

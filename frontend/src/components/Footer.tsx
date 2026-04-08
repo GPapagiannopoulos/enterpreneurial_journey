@@ -23,7 +23,7 @@ export default function Footer() {
           <a href="/soon">Instagram</a>
         </div>
       </div>
-      <div className="flex justify-center pb-18">
+      <div className="flex justify-center gap-2 pb-18">
         <Link to="/soon">Privacy Policy</Link>|
         <Link to="/soon">Terms & Conditions</Link>|
         <Link to="/soon">Cookies Policy</Link>
