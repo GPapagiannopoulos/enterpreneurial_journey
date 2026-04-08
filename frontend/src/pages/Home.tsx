@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../sections/Home/HeroSection";
 import TaglineSection from "../sections/Home/TaglineSection";
 import HowItWorksSection from "../sections/Home/HowItWorksSection";
-import ForEveryInvestorSection from "../sections/Home/ForEveryInvestorSection";
 import CTASection from "../sections/Home/CTASection";
+import GlobalInvestment from "../sections/Home/GlobalInvestment";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <HeroSection />
       <TaglineSection />
       <HowItWorksSection />
-      <ForEveryInvestorSection />
+      <GlobalInvestment />
       <CTASection />
     </div>
   );
