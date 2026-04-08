@@ -5,6 +5,7 @@ import ForDevelopers from "./pages/ForDevelopers.tsx";
 import UpdateMe from "./pages/UpdateMe.tsx";
 import UnderConstruction from "./pages/UnderConstruction.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Learn from "./pages/Learn.tsx";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/learn" element={<Learn />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/fordevelopers" element={<ForDevelopers />} />
         <Route path="/updateme" element={<UpdateMe />} />
