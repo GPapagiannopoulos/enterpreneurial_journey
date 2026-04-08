@@ -16,10 +16,10 @@ export default function Button({
 
   const ctaStyles =
     "flex items-center justify-center gap-2.5 whitespace-nowrap" +
-    " h-15 px-9.5 py-4.5" +
+    " px-9.5 py-4.5" +
     " rounded-full border border-[#27874F]" +
     " bg-white text-[#27874F]" +
-    " font-raleway text-lg leading-6" +
+    " font-raleway text-xl" +
     " hover:bg-[#27874F] hover:text-white" +
     " focus:ring-[#27874F]";
 
