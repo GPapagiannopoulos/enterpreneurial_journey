@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="gap-12 hidden md:flex">
           <Button
             label="About Us"
-            onClick={() => navigate("/explore")}
+            onClick={() => navigate("/aboutus")}
             variant="secondary"
           />
           <Button
