@@ -4,6 +4,7 @@ import TaglineSection from "../sections/Home/TaglineSection";
 import HowItWorksSection from "../sections/Home/HowItWorksSection";
 import CTASection from "../sections/Home/CTASection";
 import GlobalInvestment from "../sections/Home/GlobalInvestment";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HowItWorksSection />
       <GlobalInvestment />
       <CTASection />
+      <Footer />
     </div>
   );
 }
