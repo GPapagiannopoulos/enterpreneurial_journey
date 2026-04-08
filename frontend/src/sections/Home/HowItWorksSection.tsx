@@ -1,60 +1,72 @@
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
 import StepsCard from "../../components/StepsCard";
 import type { StepsCardProps } from "../../components/StepsCard";
+import { useState } from "react";
 
 const steps: StepsCardProps[] = [
   {
     stepNumber: 1,
-    emoji: "🔍",
-    stepName: "Browse",
-    stepDescription: "Pick projects you love",
+    stepName: "Create Your Account",
+    stepDescription:
+      "Sign up in minutes and complete a quick risk profile so we can match you to the right projects.",
   },
   {
     stepNumber: 2,
-    emoji: "\u{1F4B0}",
-    stepName: "Invest",
-    stepDescription: "Start from £500",
+    stepName: "Browse Verified Projects",
+    stepDescription:
+      "Filter by region, project type, return profile, and impact category to find what matters to you.",
   },
   {
     stepNumber: 3,
-    emoji: "📈",
-    stepName: "Track",
-    stepDescription: "Watch your impact grow",
-  },
-  {
-    stepNumber: 4,
-    emoji: "🎉",
-    stepName: "Earn",
-    stepDescription: "Get paid!",
+    stepName: "Invest & Track Your Impact",
+    stepDescription:
+      "Fund a project with any amount and follow your real-world impact over time.",
   },
 ];
 
 export default function HowItWorksSection() {
-  const navigate = useNavigate();
+  const [activeView, setActiveView] = useState<string>("investors");
 
   return (
     <section>
-      <div className="py-12 max-w-2xl mx-auto text-center">
-        <h2 className="font-extrabold text-4xl">
-          Dead Simple. <span className="text-green-600">Seriously.</span>
-        </h2>
-        <p className="font-light text-gray-500">
-          Four steps away from making an impact
-        </p>
+      <div className="py-12">
+        <div className="flex flex-cols justify-between">
+          <div>
+            <h2 className="text-black text-7xl font-bold font-raleway">
+              How it Works
+            </h2>
+            <p className="text-neutral-500 text-lg font-inter">
+              Getting started takes less than five minutes.
+            </p>
+          </div>
+          <div className="w-60 h-14 px-1.5 pt-1.5 bg-white rounded-full outline -outline-offset-1 outline-green-600/20 inline-flex justify-start items-start gap-2">
+            <button
+              className={
+                activeView === "investors"
+                  ? "w-32 h-10 px-2 bg-green-600 rounded-full flex justify-center items-center text-white text-base font-medium font-inter leading-6"
+                  : "w-32 h-10 px-2 rounded-full flex justify-center items-center text-neutral-500 text-base font-medium font-inter leading-6 transition-colors duration-200 hover:text-green-600"
+              }
+              onClick={() => setActiveView("investors")}
+            >
+              Investors
+            </button>
+            <button
+              className={
+                activeView === "developers"
+                  ? "w-24 h-10 px-4 bg-green-600 rounded-full flex justify-center items-center text-white text-base font-medium font-inter leading-6"
+                  : "w-24 h-10 px-4 rounded-full flex justify-center items-center text-neutral-500 text-base font-medium font-inter leading-6 transition-colors duration-200 hover:text-green-600"
+              }
+              onClick={() => setActiveView("developers")}
+            >
+              Developers
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="grid grid-cols-4 gap-8 max-w-4xl mx-auto items-stretch relative">
-        <div className="absolute top-1/3 left-0 right-0 h-1 bg-green-300 z-0" />
+
+      <div className="grid grid-cols-3 gap-8 items-stretch relative">
         {steps.map((step) => (
           <StepsCard key={step.stepNumber} {...step} />
         ))}
-      </div>
-      <div className="flex justify-center mt-8">
-        <Button
-          label="Let's Do This"
-          onClick={() => navigate("/updateme")}
-          variant="cta"
-        />
       </div>
     </section>
   );

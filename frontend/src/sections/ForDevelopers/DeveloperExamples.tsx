@@ -40,7 +40,7 @@ const ProjectExamples: IllustrativeProjectProps[] = [
 export default function DeveloperExamples() {
   return (
     <section>
-      <div className="grid grid-cols-3 gap-8 pt-6 px-14">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 px-4 md:px-14">
         {ProjectExamples.map((project, index) => (
           <div
             key={index}
@@ -59,7 +59,7 @@ export default function DeveloperExamples() {
           </div>
         ))}
       </div>
-      <p className="font-light text-gray-500 text-sm mt-6 mx-14">
+      <p className="font-light text-gray-500 text-sm mt-6 mx-4 md:mx-14">
         Examples are for illustrative purposes only.
       </p>
     </section>

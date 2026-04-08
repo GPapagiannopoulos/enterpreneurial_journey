@@ -13,12 +13,22 @@ export default function Button({
 }: ButtonProps) {
   const baseStyles =
     "font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1";
+
+  const ctaStyles =
+    "flex items-center justify-center gap-2.5 whitespace-nowrap" +
+    " px-9.5 py-4.5" +
+    " rounded-full border border-[#27874F]" +
+    " bg-white text-[#27874F]" +
+    " font-raleway text-xl" +
+    " hover:bg-[#27874F] hover:text-white" +
+    " focus:ring-[#27874F]";
+
   const variantStyles =
     variant === "cta"
-      ? "px-12 py-2 rounded-full bg-green-600 text-lg text-white hover:bg-green-700 focus:ring-green-500"
+      ? ctaStyles
       : variant === "primary"
-        ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
-        : "px-2 py-2 rounded-full bg-white-600 text-lg text-gray-500 hover:text-green-700 focus:ring-green-500";
+        ? "flex items-center justify-center whitespace-nowrap px-9.5 py-4.5 bg-green-700 rounded-[40px] border text-white text-xl font-bold font-raleway"
+        : "px-2 py-2 rounded-full text-black font-light font-raleway hover:text-[#27874F] focus:ring-[#27874F]";
 
   return (
     <button

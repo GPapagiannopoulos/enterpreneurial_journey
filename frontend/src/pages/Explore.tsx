@@ -155,7 +155,7 @@ export default function Explore() {
             </div>
           </div>
         </aside>
-        <div className="px-16">
+        <div className="px-4 md:px-16">
           <h1 className="text-3xl font-bold">
             Explore <span className="text-green-700">Green Projects</span>
           </h1>

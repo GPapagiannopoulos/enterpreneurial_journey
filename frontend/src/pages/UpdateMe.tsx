@@ -1,6 +1,6 @@
 import { useState, type SubmitEventHandler } from "react";
 import InputField from "../components/InputField";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import type { registrationPayload } from "../api/types";
 import { registerInterest } from "../api/auth";
 import Button from "../components/Button";
@@ -8,9 +8,12 @@ import Navbar from "../components/Navbar";
 
 export default function UpdateMe() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [role, setRole] = useState<string>("Investor");
-  const [emailAddress, setEmailAddress] = useState<string>("");
+  const [emailAddress, setEmailAddress] = useState<string>(
+    location.state?.email ?? "",
+  );
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
@@ -47,7 +50,7 @@ export default function UpdateMe() {
   return (
     <section>
       <Navbar />
-      <div className="m-14 px-8 max-w-2xl mx-auto border border-gray-200 rounded-3xl shadow-2xl">
+      <div className="mx-4 my-8 md:m-14 px-4 md:px-8 max-w-2xl md:mx-auto border border-gray-200 rounded-3xl shadow-2xl">
         <div className="text-center pt-12 pb-8">
           <h2 className="font-bold text-2xl">
             Register your interest and we will keep you updated

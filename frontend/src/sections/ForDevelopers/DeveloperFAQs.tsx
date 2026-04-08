@@ -34,7 +34,7 @@ export default function DeveloperFAQs() {
 
   return (
     <section>
-      <h2 className="font-bold text-3xl mx-14 my-8">
+      <h2 className="font-bold text-3xl mx-4 md:mx-14 my-8">
         Frequently Asked Questions
       </h2>
       {FAQs.map((FAQ, index) => (
@@ -42,7 +42,7 @@ export default function DeveloperFAQs() {
           key={index}
           className="border-gray-400 border-b-2 py-4 max-w-5xl mx-auto mb-8"
         >
-          <div className="flex justify-between items-center px-14">
+          <div className="flex justify-between items-center px-4 md:px-14">
             <h2 className="font-bold text-lg">{FAQ.question}</h2>
             <button
               onClick={() => toggleFAQ(index)}
@@ -52,7 +52,7 @@ export default function DeveloperFAQs() {
             </button>
           </div>
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedFAQ === index ? "max-h-96" : "max-h-0"} px-14`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedFAQ === index ? "max-h-96" : "max-h-0"} px-4 md:px-14`}
           >
             {FAQ.answer}
           </div>

@@ -69,7 +69,7 @@ export default function ForEveryInvestorSection() {
           Whether you're driven by impact or returns, we got you.
         </p>
       </div>
-      <div className="bg-gray-200 max-w-sm h-14 mx-auto border-0 rounded-3xl flex items-center justify-evenly px-1">
+      <div className="bg-gray-200 w-full max-w-sm h-14 mx-auto border-0 rounded-3xl flex items-center justify-evenly px-1">
         <button
           className={
             activeView === "impact"
@@ -91,7 +91,7 @@ export default function ForEveryInvestorSection() {
           <TrendingUp size={16} /> Return Focused
         </button>
       </div>
-      <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
         {panelData[activeView].map((card) => (
           <div
             key={card.title}

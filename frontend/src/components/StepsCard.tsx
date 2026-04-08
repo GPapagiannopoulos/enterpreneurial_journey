@@ -1,25 +1,30 @@
 export interface StepsCardProps {
   stepNumber: number;
-  emoji: string;
   stepName: string;
   stepDescription: string;
 }
 
 export default function StepsCard({
   stepNumber,
-  emoji,
   stepName,
   stepDescription,
 }: StepsCardProps) {
   return (
-    <div className="bg-white p-6 border-2 rounded-xl border-gray-200 flex flex-col gap-3 h-full z-10">
-      <div className="w-8 h-8 bg-green-600 rounded-lg text-white font-bold flex items-center justify-center">
-        {stepNumber}
-      </div>
-      <div className="pl-2">
-        <span>{emoji}</span>
-        <h2 className="font-extrabold text-2xl text-black">{stepName}</h2>
-        <p className="font-light text-gray-500">{stepDescription}</p>
+    <div className="px-[52.5px] py-[61.5px] bg-white rounded-3xl shadow-sm outline-1 -outline-offset-1 outline-green-600/10 inline-flex flex-col justify-center items-center gap-2.5 z-10">
+      <div className="w-full flex flex-col justify-start items-start gap-6">
+        <div className="w-16 h-16 bg-white rounded-2xl outline-1 -outline-offset-1 outline-green-600 flex items-center justify-center">
+          <span className="text-green-700 text-2xl font-bold font-inter leading-8 tracking-tight">
+            {stepNumber}
+          </span>
+        </div>
+        <div className="self-stretch flex flex-col justify-start items-start gap-4">
+          <h2 className="text-neutral-800 text-2xl font-semibold font-inter leading-8 tracking-tight">
+            {stepName}
+          </h2>
+          <p className="text-neutral-500 text-base font-normal font-inter leading-6">
+            {stepDescription}
+          </p>
+        </div>
       </div>
     </div>
   );

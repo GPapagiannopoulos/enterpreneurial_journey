@@ -47,7 +47,7 @@ export default function PlatformDeveloperSupport() {
 
   return (
     <section>
-      <h2 className="font-bold text-3xl mx-14 my-8">
+      <h2 className="font-bold text-3xl mx-4 md:mx-14 my-8">
         How the Platform Supports Developers
       </h2>
       {DeveloperSupportMechanisms.map((mechanism, index) => (
@@ -55,7 +55,7 @@ export default function PlatformDeveloperSupport() {
           key={index}
           className="border-gray-400 border-b-2 py-4 max-w-5xl mx-auto mb-8"
         >
-          <div className="flex justify-between items-center px-14">
+          <div className="flex justify-between items-center px-4 md:px-14">
             <h2 className="font-bold text-lg">{mechanism.supportType}</h2>
             <button
               onClick={() => toggleExpansion(index)}
@@ -65,7 +65,7 @@ export default function PlatformDeveloperSupport() {
             </button>
           </div>
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${mechanismsExpanded.has(index) ? "max-h-96" : "max-h-0"} px-14`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${mechanismsExpanded.has(index) ? "max-h-96" : "max-h-0"} px-4 md:px-14`}
           >
             {mechanism.supportDetail}
           </div>

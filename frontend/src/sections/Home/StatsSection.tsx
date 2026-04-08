@@ -22,7 +22,7 @@ const stats: StatsCardProps[] = [
 export default function StatsSection() {
   return (
     <section className="bg-gray-50 py-12">
-      <div className="grid grid-cols-4 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
         {stats.map((stat) => (
           <StatsCard key={stat.metric} {...stat} />
         ))}

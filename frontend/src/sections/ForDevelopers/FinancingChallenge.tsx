@@ -4,7 +4,7 @@ export default function FinancingChallenge() {
   const [isSectionExpanded, setIsSectionExpanded] = useState<boolean>(false);
 
   return (
-    <section className="mx-14">
+    <section className="mx-4 md:mx-14">
       <h2 className="font-bold text-3xl my-8">The Financing Challenge</h2>
       <p className="text-lg text-gray-500">
         This is where our short summary paragraph is going to go in

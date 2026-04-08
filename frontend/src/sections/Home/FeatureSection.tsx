@@ -39,7 +39,7 @@ const features: FeatureCardProps[] = [
 
 export default function FeaturesSection() {
   return (
-    <section className="px-20 py-20 max-w-4xl grid grid-cols-2 gap-8 mx-auto">
+    <section className="py-10 md:py-20 max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
       {features.map((feature) => (
         <FeatureCard key={feature.title} {...feature} />
       ))}
