@@ -5,6 +5,7 @@ import Signup from "./pages/signup.tsx";
 import Explore from "./pages/Explore.tsx";
 import ForDevelopers from "./pages/ForDevelopers.tsx";
 import UpdateMe from "./pages/UpdateMe.tsx";
+import UnderConstruction from "./pages/UnderConstruction.tsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/fordevelopers" element={<ForDevelopers />} />
         <Route path="/updateme" element={<UpdateMe />} />
+        <Route path="/soon" element={<UnderConstruction />} />
       </Routes>
     </BrowserRouter>
   );

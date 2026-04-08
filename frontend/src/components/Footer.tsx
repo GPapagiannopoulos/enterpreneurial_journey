@@ -12,21 +12,21 @@ export default function Footer() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-x-30 gap-y-15 text-black text-xl font-raleway">
-          <a href="#">About Us</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">X</a>
-          <a href="#">Learn</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Facebook</a>
-          <a href="#">Contact</a>
-          <a href="#">Become a Partner</a>
-          <a href="#">Instagram</a>
+          <a href="/soon">About Us</a>
+          <a href="/soon">Terms & Conditions</a>
+          <a href="/soon">X</a>
+          <a href="/soon">Learn</a>
+          <a href="/soon">Privacy Policy</a>
+          <a href="/soon">Facebook</a>
+          <a href="/soon">Contact</a>
+          <a href="/soon">Become a Partner</a>
+          <a href="/soon">Instagram</a>
         </div>
       </div>
       <div className="flex justify-center pb-18">
-        <Link to="/">Privacy Policy</Link>|
-        <Link to="/">Terms & Conditions</Link>|
-        <Link to="/">Cookies Policy</Link>
+        <Link to="/soon">Privacy Policy</Link>|
+        <Link to="/soon">Terms & Conditions</Link>|
+        <Link to="/soon">Cookies Policy</Link>
       </div>
     </section>
   );
