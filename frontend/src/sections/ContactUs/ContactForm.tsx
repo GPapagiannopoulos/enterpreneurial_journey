@@ -15,6 +15,7 @@ export default function ContactForm() {
   );
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
@@ -53,33 +54,36 @@ export default function ContactForm() {
       </div>
       <div className="bg-[#F3F3F3] border-zinc-100 rounded-[45px] flex flex-col justify-start gap-10 pt-15 pb-20 pl-25">
         <div className="flex items-start gap-16">
-          <label>
+          <label className="flex items-center gap-2">
             <input
               type="radio"
-              className={
-                role === "Investor"
-                  ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
-                  : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
-              }
+              name="role"
+              value="Investor"
+              checked={role === "Investor"}
               onChange={() => setRole("Investor")}
-            />
+              className="w-7 h-7 appearance-none rounded-full border-2 border-zinc-900 checked:bg-[#B9FF66] checked:shadow-[inset_0_0_0_4px_white]"
+            />{" "}
+            Investor
+          </label>
+          <label className="flex items-center gap-2">
             <input
               type="radio"
-              className={
-                role === "Developer"
-                  ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
-                  : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
-              }
+              name="role"
+              value="Developer"
+              checked={role === "Developer"}
               onChange={() => setRole("Developer")}
-            />
+              className="w-7 h-7 appearance-none rounded-full border-2 border-zinc-900 checked:bg-[#B9FF66] checked:shadow-[inset_0_0_0_4px_white]"
+            />{" "}
+            Developer
           </label>
         </div>
         <div className="pb-8">
-          <form onSubmit={RegisterInterest}>
+          <form onSubmit={RegisterInterest} className="flex flex-col gap-6.25">
             <InputField
               label="First Name"
               type="text"
               value={firstName}
+              placeholder="First Name"
               onChange={(e) => setFirstName(e.target.value)}
               required={true}
             />
@@ -87,6 +91,7 @@ export default function ContactForm() {
               label="Last Name"
               type="text"
               value={lastName}
+              placeholder="Last Name"
               onChange={(e) => setLastName(e.target.value)}
               required={true}
             />
@@ -94,10 +99,20 @@ export default function ContactForm() {
               label="Email Address"
               type="text"
               value={emailAddress}
+              placeholder="Email Address"
               onChange={(e) => setEmailAddress(e.target.value)}
               required={true}
             />
-
+            <label className={role === "Investor" ? "hidden" : "h-47.5"}>
+              <InputField
+                label="Message"
+                type="text"
+                placeholder="Tell us about your project"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required={false}
+              />
+            </label>
             {error && (
               <div className="p-3 bg-red-50 text-red-500 text-sm rounded-lg border border-red-200">
                 {error}
