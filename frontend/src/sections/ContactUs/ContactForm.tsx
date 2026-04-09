@@ -1,12 +1,11 @@
 import { useState, type SubmitEventHandler } from "react";
-import InputField from "../components/InputField";
-import { useNavigate, useLocation } from "react-router-dom";
-import type { registrationPayload } from "../api/types";
-import { registerInterest } from "../api/auth";
-import Button from "../components/Button";
-import Navbar from "../components/Navbar";
+import InputField from "../../components/InputField";
+import { useLocation, useNavigate } from "react-router-dom";
+import type { registrationPayload } from "../../api/types";
+import { registerInterest } from "../../api/auth";
+import Button from "../../components/Button";
 
-export default function UpdateMe() {
+export default function ContactForm() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -48,35 +47,32 @@ export default function UpdateMe() {
   };
 
   return (
-    <section>
-      <Navbar />
-      <div className="mx-4 my-8 md:m-14 px-4 md:px-8 max-w-2xl md:mx-auto border border-gray-200 rounded-3xl shadow-2xl">
-        <div className="text-center pt-12 pb-8">
-          <h2 className="font-bold text-2xl">
-            Register your interest and we will keep you updated
-          </h2>
-        </div>
-        <div className="mb-6 bg-gray-200 max-w-sm- h-10 mx-auto border-0 rounded-3xl flex items-center justify-evenly px-1">
-          <button
-            className={
-              role === "Investor"
-                ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
-                : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
-            }
-            onClick={() => setRole("Investor")}
-          >
-            For Investors
-          </button>
-          <button
-            className={
-              role === "Developer"
-                ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
-                : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
-            }
-            onClick={() => setRole("Developer")}
-          >
-            For Developers
-          </button>
+    <section className="flex flex-col gap-25 pt-35 pb-28 border-b">
+      <div className="text-black text-7xl font-bold font-raleway">
+        Contact Us
+      </div>
+      <div className="bg-[#F3F3F3] border-zinc-100 rounded-[45px] flex flex-col justify-start gap-10 pt-15 pb-20 pl-25">
+        <div className="flex items-start gap-16">
+          <label>
+            <input
+              type="radio"
+              className={
+                role === "Investor"
+                  ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
+                  : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
+              }
+              onChange={() => setRole("Investor")}
+            />
+            <input
+              type="radio"
+              className={
+                role === "Developer"
+                  ? "bg-white text-green-600 rounded-3xl shadow-sm py-1 px-6 my-1 self-stretch flex items-center gap-2"
+                  : "transition-colors duration-200 ease-in-out hover:bg-white hover:text-green-600 rounded-3xl py-1 px-6 my-1 self-stretch flex items-center gap-2"
+              }
+              onChange={() => setRole("Developer")}
+            />
+          </label>
         </div>
         <div className="pb-8">
           <form onSubmit={RegisterInterest}>
