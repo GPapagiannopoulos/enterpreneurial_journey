@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import type { registrationPayload } from "../../api/types";
 import { registerInterest } from "../../api/auth";
 import Button from "../../components/Button";
+import starsSvg from "../../assets/icons/stars.svg";
 
 export default function ContactForm() {
   const navigate = useNavigate();
@@ -52,7 +53,13 @@ export default function ContactForm() {
       <div className="text-black text-7xl font-bold font-raleway">
         Contact Us
       </div>
-      <div className="bg-[#F3F3F3] border-zinc-100 rounded-[45px] flex flex-col justify-start gap-10 pt-15 pb-20 pl-25">
+      <div className="relative overflow-hidden bg-[#F3F3F3] border-zinc-100 rounded-[45px] flex flex-col justify-start gap-10 pt-15 pb-20 pl-25">
+        <img
+          src={starsSvg}
+          alt=""
+          aria-hidden="true"
+          className="absolute -right-36 top-98 -translate-y-1/2 z-10 pointer-events-none"
+        />
         <div className="flex items-start gap-16">
           <label className="flex items-center gap-2">
             <input
