@@ -33,14 +33,14 @@ export default function Navbar() {
           />
           <Button
             label="Contact"
-            onClick={() => navigate("/forinvestors")}
+            onClick={() => navigate("/contactus")}
             variant="secondary"
           />
         </div>
         <div>
           <Button
             label="Join Waitlist"
-            onClick={() => navigate("/updateme")}
+            onClick={() => navigate("/contactus")}
             variant="cta"
           />
         </div>

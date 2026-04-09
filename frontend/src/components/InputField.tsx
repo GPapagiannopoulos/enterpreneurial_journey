@@ -5,7 +5,9 @@ interface InputFieldProps {
   placeholder?: string;
   type: "text" | "password" | "email" | "date";
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
   required?: boolean;
 }
 
@@ -18,18 +20,31 @@ export default function InputField({
   required = false,
 }: InputFieldProps) {
   return (
-    <div className="flex flex-col gap-1.5 w-full">
+    <div className="flex flex-col gap-2 w-139">
       {label && (
-        <label className="text-sm font-semibold text-gray-700">{label}</label>
+        <label className="text-sm font-medium text-black font-inter">
+          {label}
+          {required && "*"}
+        </label>
       )}
-      <input
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        className="bg-neutral-100 border rounded-[40px] text-neutral-500 text-xl font-raleway px-9.5 py-3.5"
-      />
+      {label === "Message" ? (
+        <textarea
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          required={required}
+          className="bg-white border border-zinc-900 rounded-2xl text-neutral-500 text-lg font-inter px-8 py-4 placeholder:text-neutral-400 focus:outline-none h-47.5 resize-none"
+        />
+      ) : (
+        <input
+          type={type}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          required={required}
+          className="bg-white border border-zinc-900 rounded-2xl text-neutral-500 text-lg font-inter px-8 py-4 placeholder:text-neutral-400 focus:outline-none"
+        />
+      )}
     </div>
   );
 }
