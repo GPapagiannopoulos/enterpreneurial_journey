@@ -1,8 +1,13 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import LogoIcon from "./icons/logo";
+import SolarPanel from "./icons/SolarPanel";
+import Storage from "./icons/Storage";
+import Wind from "./icons/Wind";
+import ChargingStation from "./icons/ChargingStation";
+import Windmill from "./icons/Windmill";
 
 export default function Navbar() {
   const location = useLocation();
@@ -43,13 +48,48 @@ export default function Navbar() {
               active={location.pathname.startsWith("/projects")}
             />
             {projectsOpen && (
-              <div className="absolute top-full left-0 mt-2 z-50 bg-white shadow-lg rounded-2xl">
-                <div>Solar</div>
-                <div>Storage</div>
-                <div>Wind</div>
-                <div>EV Charging</div>
-                <div>Energy Mix</div>
-                <div>See all projects</div>
+              <div className="absolute w-72 mt-2 px-8 py-8 top-full right-0 z-50 bg-white shadow-lg rounded-2xl border border-zinc">
+                <div className="flex flex-col gap-3">
+                  <Button
+                    icon={<SolarPanel></SolarPanel>}
+                    label="Solar"
+                    variant="primary"
+                    onClick={() => navigate("/contactus")}
+                  />
+                  <Button
+                    icon={<Storage></Storage>}
+                    label="Storage"
+                    variant="primary"
+                    onClick={() => navigate("/contactus")}
+                  />
+                  <Button
+                    icon={<Wind></Wind>}
+                    label="Wind"
+                    variant="primary"
+                    onClick={() => navigate("/contactus")}
+                  />
+                  <Button
+                    icon={<ChargingStation></ChargingStation>}
+                    label="EV Charging"
+                    variant="primary"
+                    onClick={() => navigate("/contactus")}
+                  />
+                  <Button
+                    icon={<Windmill></Windmill>}
+                    label="Energy Mix"
+                    variant="primary"
+                    onClick={() => navigate("/contactus")}
+                  />
+                  <div>
+                    <Link
+                      to="/learn"
+                      className="flex items-center gap-1 text-teal-950 hover:font-bold hover:gap-2 transition-all"
+                    >
+                      See all projects
+                      <ArrowRight size={18} />
+                    </Link>
+                  </div>
+                </div>
               </div>
             )}
           </div>
