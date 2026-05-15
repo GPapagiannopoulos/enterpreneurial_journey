@@ -1,6 +1,7 @@
 interface ButtonProps {
   label: string;
   onClick?: () => void;
+  active?: boolean;
   variant?: "primary" | "secondary" | "cta";
   type?: "button" | "submit" | "reset";
 }
@@ -8,11 +9,12 @@ interface ButtonProps {
 export default function Button({
   label,
   onClick,
+  active,
   variant = "primary",
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1";
+    "font-bold transition-colors duration-300 focus:outline-none focus:font-bold";
 
   const ctaStyles =
     "flex items-center justify-center gap-2.5 whitespace-nowrap" +
@@ -28,7 +30,8 @@ export default function Button({
       ? ctaStyles
       : variant === "primary"
         ? "flex items-center justify-center whitespace-nowrap px-9.5 py-4.5 bg-green-700 rounded-[40px] border text-white text-xl font-bold font-raleway"
-        : "px-2 py-2 rounded-full text-black font-light font-raleway hover:text-[#27874F] focus:ring-[#27874F]";
+        : "px-2 py-2 rounded-full text-teal-950 font-inter hover:font-bold" +
+          (active ? " font-bold" : " font-normal");
 
   return (
     <button
@@ -36,7 +39,10 @@ export default function Button({
       className={`${baseStyles} ${variantStyles}`}
       onClick={onClick}
     >
-      {label}
+      <span className="relative inline-block">
+        <span className="invisible font-bold">{label}</span>
+        <span className="absolute inset-0">{label}</span>
+      </span>
     </button>
   );
 }

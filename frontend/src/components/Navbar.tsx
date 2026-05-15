@@ -1,10 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import LogoIcon from "./icons/logo";
 
 export default function Navbar() {
+  const location = useLocation();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
@@ -22,26 +23,28 @@ export default function Navbar() {
 
         <div className="gap-12 hidden md:flex">
           <Button
+            label="Home"
+            onClick={() => navigate("/")}
+            active={location.pathname === "/"}
+            variant="secondary"
+          />
+          <Button
+            label="Projects"
+            onClick={() => navigate("/projects")}
+            active={location.pathname === "/projects"}
+            variant="secondary"
+          />
+          <Button
+            label="Education"
+            onClick={() => navigate("/learn")}
+            active={location.pathname === "/learn"}
+            variant="secondary"
+          />
+          <Button
             label="About Us"
             onClick={() => navigate("/aboutus")}
+            active={location.pathname === "/aboutus"}
             variant="secondary"
-          />
-          <Button
-            label="Learn"
-            onClick={() => navigate("/learn")}
-            variant="secondary"
-          />
-          <Button
-            label="Contact"
-            onClick={() => navigate("/contactus")}
-            variant="secondary"
-          />
-        </div>
-        <div>
-          <Button
-            label="Join Waitlist"
-            onClick={() => navigate("/contactus")}
-            variant="cta"
           />
         </div>
         <div className="block md:hidden">
