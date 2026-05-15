@@ -2,6 +2,7 @@ interface ButtonProps {
   label: string;
   onClick?: () => void;
   active?: boolean;
+  icon?: React.ReactNode;
   variant?: "primary" | "secondary" | "cta";
   type?: "button" | "submit" | "reset";
 }
@@ -10,6 +11,7 @@ export default function Button({
   label,
   onClick,
   active,
+  icon,
   variant = "primary",
   type = "button",
 }: ButtonProps) {
@@ -39,9 +41,15 @@ export default function Button({
       className={`${baseStyles} ${variantStyles}`}
       onClick={onClick}
     >
-      <span className="relative inline-block">
-        <span className="invisible font-bold">{label}</span>
-        <span className="absolute inset-0">{label}</span>
+      <span className="relative inline-flex items-center gap-1">
+        <span className="invisible font-bold inline-flex items-center gap-1">
+          {label}
+          {icon}
+        </span>
+        <span className="absolute inset-0 inline-flex items-center justify-center gap-1">
+          {label}
+          {icon}
+        </span>
       </span>
     </button>
   );
