@@ -28,7 +28,7 @@ const steps: StepsCardProps[] = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="px-30">
+    <section className="px-30 pb-30">
       <div className="py-12 mb-22.5">
         <div>
           <h2 className="text-center text-teal-950 text-8xl font-bold font-['DM_Sans'] tracking-wide">

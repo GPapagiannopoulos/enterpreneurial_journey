@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import HeroSection from "../sections/Home/HeroSection";
 import HowItWorksSection from "../sections/Home/HowItWorksSection";
+import WhyNoverta from "../sections/Home/WhyNoverta";
 import CTASection from "../sections/Home/CTASection";
-import GlobalInvestment from "../sections/Home/GlobalInvestment";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <HowItWorksSection />
-      <GlobalInvestment />
+      <WhyNoverta />
       <CTASection />
       <Footer />
     </div>
