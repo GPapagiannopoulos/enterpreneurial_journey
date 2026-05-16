@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import heroImage from "../../assets/icons/HeroImage.svg";
 
 export default function HeroSection() {
   const navigate = useNavigate();
@@ -30,11 +31,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <img
-          className="mt-40 w-full"
-          src="../../assets/icons/HeroImage.svg"
-          alt="Hero"
-        />
+        <img className="mt-40 w-full" src={heroImage} alt="Hero" />
 
         <div className="mt-8 md:mt-12 w-full lg:w-267.25 px-6 md:px-8 py-6 md:py-7 bg-neutral-300/40 rounded-lg border-[1.50px] border-neutral-300 flex justify-center items-center">
           <p className="text-center md:text-left text-base md:text-xl lg:text-2xl font-['Inter'] leading-7">

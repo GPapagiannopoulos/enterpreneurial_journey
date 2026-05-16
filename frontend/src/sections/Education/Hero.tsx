@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import solarPanelsEdu from "../../assets/icons/SolarPanelsEdu.png";
 
 export default function Hero() {
   return (
@@ -30,7 +31,7 @@ export default function Hero() {
           </Link>
         </div>
         <img
-          src="/src/assets/icons/SolarPanelsEdu.png"
+          src={solarPanelsEdu}
           alt="Solar Panels"
           className="lg:col-start-2 w-full aspect-4/5 object-cover rounded-lg"
         />

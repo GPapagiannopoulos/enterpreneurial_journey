@@ -1,5 +1,6 @@
 import type { WhyCard } from "../../components/BenefitsCard";
 import BenefitsCard from "../../components/BenefitsCard";
+import solarPanelsWhy from "../../assets/icons/SolarPanelsWhy.png";
 
 const benefits: WhyCard[] = [
   {
@@ -39,7 +40,7 @@ export default function WhyNoverta() {
           </p>
           <img
             className="w-full rounded-lg pt-25"
-            src="../../assets/icons/SolarPanelsWhy.png"
+            src={solarPanelsWhy}
             alt="Solar panels"
           />
         </div>
