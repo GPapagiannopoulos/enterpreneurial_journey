@@ -82,7 +82,7 @@ export default function Navbar() {
                   />
                   <div>
                     <Link
-                      to="/learn"
+                      to="/contactus"
                       className="flex items-center gap-1 text-teal-950 hover:font-bold hover:gap-2 transition-all"
                     >
                       See all projects
