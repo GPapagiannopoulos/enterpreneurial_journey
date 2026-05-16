@@ -39,7 +39,7 @@ export default function WhyNoverta() {
           </p>
           <img
             className="w-full rounded-lg pt-25"
-            src="/src/assets/icons/SolarPanelsWhy.png"
+            src="../../assets/icons/SolarPanelsWhy.png"
             alt="Solar panels"
           />
         </div>
