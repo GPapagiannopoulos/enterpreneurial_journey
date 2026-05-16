@@ -1,55 +1,51 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Button from "../../components/Button";
-import ProjectCard from "../../components/ProjectCard";
-import ImpactDashboard from "../../components/ImpactDashboard";
-import InputField from "../../components/InputField";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   const navigate = useNavigate();
 
-  const [emailAddress, setEmailAddress] = useState<string>("");
-
   return (
-    <section className="bg-white">
-      <div className="mt-82.5 pb-42.5 flex flex-col lg:flex-row items-center md:gap-12 border-b">
-        <div className="w-240.25">
-          <h1 className="text-8xl text-black font-bold font-raleway leading-29 whitespace-nowrap">
-            Think long term,
-            <br />
-            invest <span className="text-green-700">green</span>.
+    <section className="relative w-full bg-white overflow-hidden">
+      <div className="h-1 w-full bg-zinc-300/60 blur-[10.40px]" />
+
+      <div className="mx-auto max-w-410 px-6 md:px-12 lg:px-35 py-12 md:py-20 lg:py-30">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12">
+          <h1 className="lg:flex-[3] text-teal-950 font-bold font-['DM_Sans'] tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight lg:leading-[90px]">
+            We make infrastructure investing accessible to everyone.
           </h1>
-          <p className="pt-39 w-156.25">
-            <span className="text-neutral-500 text-2xl font-normal font-inter leading-10 tracking-tight">
-              Invest in renewable energy projects.{" "}
-              <span className="text-green-600 font-semibold">
-                Earn 6-10% returns.
-              </span>{" "}
-              Track your personal impact in real time.
-            </span>
-          </p>
-          <div className="mt-17.5 flex items-center ">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                navigate("/updateme", { state: { email: emailAddress } });
-              }}
-              className="inline-flex items-center gap-6"
+
+          <div className="mt-8 lg:mt-0 lg:flex-[2] flex flex-col gap-16">
+            <p className="text-black font-medium font-['Inter'] tracking-tight text-lg md:text-xl lg:text-2xl leading-relaxed lg:leading-9">
+              We connect people with institutional level infrastructure
+              investments, making it accessible to everyone.
+            </p>
+
+            <button
+              onClick={() => navigate("/contactus")}
+              className="self-start inline-flex items-center gap-3 px-12 py-4 bg-teal-950 rounded-lg outline-1 -outline-offset-1 outline-green-700 text-white text-xl font-bold font-['DM_Sans'] hover:bg-teal-900 transition-colors"
             >
-              <InputField
-                placeholder="Enter your email"
-                type="text"
-                value={emailAddress}
-                onChange={(e) => setEmailAddress(e.target.value)}
-              />
-              <Button label="Get Started" type="submit" variant="primary" />
-            </form>
+              Join the waitlist
+              <ArrowRight className="w-7 h-6" />
+            </button>
           </div>
         </div>
 
-        <div className="bg-green-100 rounded-[40px] w-153.25 h-153.25 relative">
-          <ProjectCard />
-          <ImpactDashboard />
+        <img
+          className="mt-40 w-full"
+          src="/src/assets/icons/HeroImage.svg"
+          alt="Hero"
+        />
+
+        <div className="mt-8 md:mt-12 w-full lg:w-267.25 px-6 md:px-8 py-6 md:py-7 bg-neutral-300/40 rounded-lg border-[1.50px] border-neutral-300 flex justify-center items-center">
+          <p className="text-center md:text-left text-base md:text-xl lg:text-2xl font-['Inter'] leading-7">
+            <span className="text-stone-950 font-normal">
+              If you're a project developer or infrastructure partner looking to
+              list opportunities on Noverta, please{" "}
+            </span>
+            <span className="text-teal-950 font-bold cursor-pointer hover:underline">
+              <a href="/contactus">click here. </a>
+            </span>
+          </p>
         </div>
       </div>
     </section>

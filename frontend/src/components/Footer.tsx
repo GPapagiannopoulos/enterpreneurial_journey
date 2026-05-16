@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import LogoIcon from "./icons/logo";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col gap-9">
+    <section className="flex flex-col gap-9 px-30">
       <div className="flex justify-between pt-35 pb-10 gap-50 border-b border-black">
         <div className="flex flex-col gap-7">
-          <div className="text-4xl font-bold font-raleway">Noverta</div>
+          <div className="text-4xl font-bold flex flex-inline gap-6 font-raleway">
+            <LogoIcon></LogoIcon>Noverta
+          </div>
           <div className="text-black text-xl font-raleway">
             Noverta is a London-based startup bringing green energy crowdfunding
             to the UK for investors and green developers

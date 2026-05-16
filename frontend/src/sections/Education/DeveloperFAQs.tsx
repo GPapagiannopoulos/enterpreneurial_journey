@@ -1,4 +1,6 @@
+import { ChevronRight } from "lucide-react";
 import { useState } from "react";
+import Button from "../../components/Button";
 
 export interface FAQProps {
   question: string;
@@ -41,38 +43,44 @@ export default function DeveloperFAQs() {
   };
 
   return (
-    <section className="pt-44 pb-54 flex flex-col gap-16">
-      <h2 className="text-black text-7xl font-bold font-raleway">
-        Frequently Asked Questions
+    <section className="pt-44 px-30 flex flex-col gap-16">
+      <h2 className="text-teal-950 text-6xl font-bold font-['DM_Sans'] tracking-wide">
+        FAQ
       </h2>
       <div className="flex flex-col gap-8.5">
         {FAQs.map((FAQ, index) => (
           <div
             key={index}
-            className="w-full bg-white rounded-[45px] shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] outline -outline-offset-1 outline-sinc-900 flex flex-col gap-7 px-14 py-10 overflow-hidden"
+            className="w-full bg-[#BDDBCDA6] rounded-light flex flex-col gap-7 px-14 py-10 overflow-hidden"
           >
             <div className="flex justify-between items-center px-4 md:px-14">
-              <div className="flex items-center gap-6 font-medium">
+              <div className="flex items-center gap-8 font-medium">
                 <div className="text-6xl">
                   {index < 10 ? "0" : ""}
                   {index + 1}
                 </div>
-                <div className="text-3xl">{FAQ.question}</div>
+                <div className="text-4xl">{FAQ.question}</div>
               </div>
               <div>
-                <button
-                  className="w-14 h-14 bg-zinc-100 rounded-full border border-zinc-900 flex items-center justify-center font-extrabold text-3xl ease-in-out duration-300"
+                <Button
+                  label=""
+                  icon={
+                    <ChevronRight
+                      className={`size-12 transition-transform ${index == expandedFAQ ? "rotate-90" : ""}`}
+                    />
+                  }
+                  variant="secondary"
                   onClick={() => toggleFAQ(index)}
-                >
-                  {expandedFAQ === index ? "-" : "+"}
-                </button>
+                  active={location.pathname.startsWith("/projects")}
+                />
               </div>
             </div>
             <div
               className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedFAQ === index ? "max-h-96" : "max-h-0"} px-4 md:px-14`}
             >
-              <div className="w-full h-px bg-black"></div>
-              <p className="text-lg font-normal">{FAQ.answer}</p>
+              <p className="text-teal-950 text-3xl font-normal font-inter leading-9">
+                {FAQ.answer}
+              </p>
             </div>
           </div>
         ))}

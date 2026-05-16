@@ -20,7 +20,7 @@ export default function InputField({
   required = false,
 }: InputFieldProps) {
   return (
-    <div className="flex flex-col gap-2 w-139">
+    <div className="flex flex-col gap-2 w-full">
       {label && (
         <label className="text-sm font-medium text-black font-inter">
           {label}
