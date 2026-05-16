@@ -17,7 +17,7 @@ export default function Navbar() {
   const [projectsOpen, setProjectsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="h-25 flex bg-white border-b">
+    <nav className="h-25 flex bg-white border-b px-30">
       <div className="flex justify-between items-center w-full">
         <Link to="/">
           <div className="flex items-center gap-3">
