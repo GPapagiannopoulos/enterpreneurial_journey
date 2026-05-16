@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Hero from "../sections/AboutUs/Hero";
-import DeveloperFAQs from "../sections/AboutUs/DeveloperFAQs";
+import DeveloperFAQs from "../sections/Education/DeveloperFAQs";
 import HowItWorksSection from "../sections/Home/HowItWorksSection";
 
 export default function AboutUs() {
