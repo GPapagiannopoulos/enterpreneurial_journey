@@ -32,7 +32,7 @@ export default function HeroSection() {
 
         <img
           className="mt-40 w-full"
-          src="/src/assets/icons/HeroImage.svg"
+          src="../../assets/icons/HeroImage.svg"
           alt="Hero"
         />
 
