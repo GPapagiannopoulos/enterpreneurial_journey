@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 
-export default function Hero() {
+export default function Commitments() {
   const navigate = useNavigate();
 
   return (

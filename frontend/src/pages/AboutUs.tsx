@@ -1,16 +1,14 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Hero from "../sections/AboutUs/Hero";
-import DeveloperFAQs from "../sections/Education/DeveloperFAQs";
-import HowItWorksSection from "../sections/Home/HowItWorksSection";
+import Commitments from "../sections/AboutUs/Commitments";
+import MeetTheTeam from "../sections/AboutUs/MeetTheTeam";
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen px-35">
+    <div className="min-h-screen">
       <Navbar />
-      <Hero />
-      <HowItWorksSection />
-      <DeveloperFAQs />
+      <MeetTheTeam />
+      <Commitments />
       <Footer />
     </div>
   );
