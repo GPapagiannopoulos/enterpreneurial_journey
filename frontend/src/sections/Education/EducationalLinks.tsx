@@ -1,4 +1,9 @@
-import webSearchImg from "../../assets/icons/web_search.png";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import SolarPanelsImg1 from "../../assets/icons/SolarPanelsLinks1.png";
+import SolarPanelsImg2 from "../../assets/icons/SolarPanelsLinks2.png";
+import SolarPanelsImg3 from "../../assets/icons/SolarPanelsLinks3.png";
 
 interface EducationLinksProps {
   title: string;
@@ -7,75 +12,89 @@ interface EducationLinksProps {
 }
 
 const links: EducationLinksProps[] = [
-  {
-    title: "What is Green investing?",
-    link: "/soon",
-    image: webSearchImg,
-  },
+  { title: "What is Green investing?", link: "/soon", image: SolarPanelsImg1 },
   {
     title: "Green vs. Traditional Investing",
     link: "/soon",
-    image: webSearchImg,
+    image: SolarPanelsImg2,
   },
-  {
-    title: "Carbon Credits Explained",
-    link: "/soon",
-    image: webSearchImg,
-  },
+  { title: "Carbon Credits Explained", link: "/soon", image: SolarPanelsImg3 },
   {
     title: "Building a Green Portfolio",
     link: "/soon",
-    image: webSearchImg,
+    image: SolarPanelsImg1,
   },
-  {
-    title: "How Returns Work",
-    link: "/soon",
-    image: webSearchImg,
-  },
-  {
-    title: "Types of green projects",
-    link: "/soon",
-    image: webSearchImg,
-  },
+  { title: "How Returns Work", link: "/soon", image: SolarPanelsImg2 },
+  { title: "Types of green projects", link: "/soon", image: SolarPanelsImg3 },
 ];
 
 export default function EducationalLinks() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scrollByPanel = (direction: 1 | -1) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const firstPanel = track.firstElementChild as HTMLElement | null;
+    if (!firstPanel) return;
+    const panelWidth = firstPanel.offsetWidth + 32;
+    track.scrollBy({ left: direction * panelWidth, behavior: "smooth" });
+  };
+
   return (
-    <section className="py-20 border-b">
-      <div className="flex justify-between items-start mb-16">
-        <h2 className="text-7xl font-bold font-raleway">Educational Links</h2>
-        <p className="text-neutral-500 text-sm font-inter max-w-xs pt-4">
-          Our educational links are here to help you begin your green investment
-          journey!
-        </p>
+    <section className="py-20">
+      <div className="grid grid-cols-2 mb-12 px-30">
+        <div>
+          <h2 className="text-6xl text-teal-950 font-bold font-['DM_Sans'] tracking-wide leading-32 lg:col-start-1 lg:row-start-1">
+            Educational Links
+          </h2>
+          <p className="text-3xl text-black font-medium font-inter leading-10 tracking-tight lg:col-start-1">
+            We connect people and institutions with verified green projects
+            worldwide, making it easy to invest where the planet needs it most.
+          </p>
+        </div>
+
+        <div className="lg:col-start-2 lg:row-start-1 flex items-center justify-end gap-4">
+          <button
+            onClick={() => scrollByPanel(-1)}
+            aria-label="Previous"
+            className="w-14 h-14 rounded-full bg-teal-950 text-white flex items-center justify-center hover:bg-zinc-900 hover:fond-bold transition-colors"
+          >
+            <ArrowLeft size={24} />
+          </button>
+          <button
+            onClick={() => scrollByPanel(1)}
+            aria-label="Next"
+            className="w-14 h-14 rounded-full bg-teal-950 text-white flex items-center justify-center hover:bg-zinc-900 hover:fond-bold transition-colors"
+          >
+            <ArrowRight size={24} />
+          </button>
+        </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8">
+      <div
+        ref={trackRef}
+        className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory px-30 py-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         {links.map((link, index) => (
-          <a
+          <Link
             key={index}
-            href={link.link}
-            className="flex justify-between items-center p-8 bg-white rounded-[30px] outline outline-1 outline-offset-[-1px] outline-zinc-900 shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] hover:translate-y-1 hover:shadow-none transition-all duration-200"
+            to={link.link}
+            className="snap-start shrink-0 w-[400px] aspect-[4/5] relative rounded-2xl overflow-hidden group"
           >
-            <div className="flex flex-col justify-between gap-12 h-full">
-              <h3 className="text-xl font-bold font-inter max-w-60">
-                {link.title}
-              </h3>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full border border-zinc-900 flex items-center justify-center">
-                  <span className="text-sm">↗</span>
-                </div>
-                <span className="text-sm font-medium font-inter">
-                  Learn more
-                </span>
-              </div>
-            </div>
             <img
               src={link.image}
               alt={link.title}
-              className="w-32 h-32 object-contain"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-          </a>
+            <div className="absolute left-4 right-4 bottom-4 bg-white/95 backdrop-blur rounded-xl px-5 py-4 flex items-center justify-between gap-4">
+              <h3 className="text-base font-bold font-inter text-zinc-900">
+                {link.title}
+              </h3>
+              <div className="w-8 h-8 rounded-full border border-zinc-900 flex items-center justify-center shrink-0">
+                <span className="text-sm">↗</span>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
