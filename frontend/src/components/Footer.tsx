@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col gap-9">
+    <section className="flex flex-col gap-9 px-30">
       <div className="flex justify-between pt-35 pb-10 gap-50 border-b border-black">
         <div className="flex flex-col gap-7">
           <div className="text-4xl font-bold font-raleway">Noverta</div>

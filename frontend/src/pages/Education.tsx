@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import EducationalLinks from "../sections/Learn/EducationalLinks";
-import Hero from "../sections/Learn/Hero";
+import EducationalLinks from "../sections/Education/EducationalLinks";
+import Hero from "../sections/Education/Hero";
 
-export default function Learn() {
+export default function Education() {
   return (
-    <div className="min-h-screen px-35">
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
       <EducationalLinks />

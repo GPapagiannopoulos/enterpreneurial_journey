@@ -95,8 +95,8 @@ export default function Navbar() {
           </div>
           <Button
             label="Education"
-            onClick={() => navigate("/learn")}
-            active={location.pathname === "/learn"}
+            onClick={() => navigate("/education")}
+            active={location.pathname === "/education"}
             variant="secondary"
           />
           <Button
