@@ -21,7 +21,7 @@ export default function HeroSection() {
             </p>
 
             <button
-              onClick={() => navigate("/waitlist")}
+              onClick={() => navigate("/contactus")}
               className="self-start inline-flex items-center gap-3 px-12 py-4 bg-teal-950 rounded-lg outline-1 -outline-offset-1 outline-green-700 text-white text-xl font-bold font-['DM_Sans'] hover:bg-teal-900 transition-colors"
             >
               Join the waitlist
@@ -43,7 +43,7 @@ export default function HeroSection() {
               list opportunities on Noverta, please{" "}
             </span>
             <span className="text-teal-950 font-bold cursor-pointer hover:underline">
-              click here.
+              <a href="/contactus">click here. </a>
             </span>
           </p>
         </div>

@@ -4,7 +4,7 @@ import ContactForm from "../sections/ContactUs/ContactForm";
 
 export default function ContactUs() {
   return (
-    <section className="min-h-screen mx-35">
+    <section className="min-h-screen">
       <Navbar />
       <ContactForm />
       <Footer />
