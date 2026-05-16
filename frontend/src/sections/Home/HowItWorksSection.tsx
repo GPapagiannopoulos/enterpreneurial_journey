@@ -1,72 +1,55 @@
 import StepsCard from "../../components/StepsCard";
 import type { StepsCardProps } from "../../components/StepsCard";
-import { useState } from "react";
+import ListMagnifierGlass from "../../components/icons/ListMagnifierGlass";
+import Coins from "../../components/icons/Coins";
+import Hourglass from "../../components/icons/Hourglass";
+import { Info } from "lucide-react";
 
 const steps: StepsCardProps[] = [
   {
-    stepNumber: 1,
-    stepName: "Create Your Account",
+    icon: <ListMagnifierGlass></ListMagnifierGlass>,
+    stepName: "Discover projects",
     stepDescription:
-      "Sign up in minutes and complete a quick risk profile so we can match you to the right projects.",
+      "Browse available projects and review key information, including structure, risks, and project fundamentals.",
   },
   {
-    stepNumber: 2,
-    stepName: "Browse Verified Projects",
+    icon: <Coins></Coins>,
+    stepName: "Allocate Capital",
     stepDescription:
-      "Filter by region, project type, return profile, and impact category to find what matters to you.",
+      "Select a project and choose an amount to allocate, subject to platform availability and eligibility.",
   },
   {
-    stepNumber: 3,
-    stepName: "Invest & Track Your Impact",
+    icon: <Hourglass></Hourglass>,
+    stepName: "Track Performance",
     stepDescription:
-      "Fund a project with any amount and follow your real-world impact over time.",
+      "Follow project progress and performance over time through a dedicated platform interface.",
   },
 ];
 
 export default function HowItWorksSection() {
-  const [activeView, setActiveView] = useState<string>("investors");
-
   return (
-    <section>
-      <div className="py-12">
-        <div className="flex flex-cols justify-between">
-          <div>
-            <h2 className="text-black text-7xl font-bold font-raleway">
-              How it Works
-            </h2>
-            <p className="text-neutral-500 text-lg font-inter">
-              Getting started takes less than five minutes.
-            </p>
-          </div>
-          <div className="w-60 h-14 px-1.5 pt-1.5 bg-white rounded-full outline -outline-offset-1 outline-green-600/20 inline-flex justify-start items-start gap-2">
-            <button
-              className={
-                activeView === "investors"
-                  ? "w-32 h-10 px-2 bg-green-600 rounded-full flex justify-center items-center text-white text-base font-medium font-inter leading-6"
-                  : "w-32 h-10 px-2 rounded-full flex justify-center items-center text-neutral-500 text-base font-medium font-inter leading-6 transition-colors duration-200 hover:text-green-600"
-              }
-              onClick={() => setActiveView("investors")}
-            >
-              Investors
-            </button>
-            <button
-              className={
-                activeView === "developers"
-                  ? "w-24 h-10 px-4 bg-green-600 rounded-full flex justify-center items-center text-white text-base font-medium font-inter leading-6"
-                  : "w-24 h-10 px-4 rounded-full flex justify-center items-center text-neutral-500 text-base font-medium font-inter leading-6 transition-colors duration-200 hover:text-green-600"
-              }
-              onClick={() => setActiveView("developers")}
-            >
-              Developers
-            </button>
-          </div>
+    <section className="px-30">
+      <div className="py-12 mb-22.5">
+        <div>
+          <h2 className="text-center text-teal-950 text-8xl font-bold font-['DM_Sans'] tracking-wide">
+            How it Works
+          </h2>
         </div>
       </div>
 
       <div className="grid grid-cols-3 gap-8 items-stretch relative">
-        {steps.map((step) => (
-          <StepsCard key={step.stepNumber} {...step} />
+        {steps.map((step, index) => (
+          <StepsCard key={index} {...step} />
         ))}
+      </div>
+
+      <div className="mt-8 md:mt-12 w-full lg:w-267.25 px-6 md:px-8 py-6 md:py-7 bg-neutral-300/40 rounded-lg border-[1.50px] border-neutral-300 flex justify-center items-center gap-6">
+        <Info className="size-18"></Info>
+        <p className="text-stone-950 text-2xl font-normal font-['Inter'] leading-7">
+          This is not an offer to invest. We are not currently authorised or
+          regulated by the Financial Conduct Authority. This information is for
+          educational purposes only.
+        </p>
       </div>
     </section>
   );
