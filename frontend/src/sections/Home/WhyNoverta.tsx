@@ -1,6 +1,6 @@
-import type { WhyCard } from "../../components/BenefitsCard";
-import BenefitsCard from "../../components/BenefitsCard";
-import solarPanelsWhy from "../../assets/icons/SolarPanelsWhy.png";
+import type { WhyCard } from "../../components/ui/BenefitsCard";
+import BenefitsCard from "../../components/ui/BenefitsCard";
+import solarPanelsWhy from "../../assets/icons/Hero/SolarPanelsWhy.png";
 
 const benefits: WhyCard[] = [
   {
