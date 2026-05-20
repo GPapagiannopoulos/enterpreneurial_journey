@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Button from "../components/Button";
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/Navbar";
+import Button from "../components/ui/Button";
 
 export default function UnderConstruction() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function UnderConstruction() {
           onClick={() => navigate("/")}
         />
       </div>
+      <Footer />
     </div>
   );
 }
