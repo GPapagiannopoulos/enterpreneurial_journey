@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.tsx";
-import Explore from "./pages/Explore.tsx";
-import ForDevelopers from "./pages/ForDevelopers.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import UnderConstruction from "./pages/UnderConstruction.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
@@ -14,8 +12,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/education" element={<Education />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/fordevelopers" element={<ForDevelopers />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/soon" element={<UnderConstruction />} />
       </Routes>
