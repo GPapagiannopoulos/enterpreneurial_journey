@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import SolarPanelsImg1 from "../../assets/icons/SolarPanelsLinks1.png";
-import SolarPanelsImg2 from "../../assets/icons/SolarPanelsLinks2.png";
-import SolarPanelsImg3 from "../../assets/icons/SolarPanelsLinks3.png";
+import SolarPanelsImg1 from "../../assets/icons/Education/SolarPanelsLinks1.png";
+import SolarPanelsImg2 from "../../assets/icons/Education/SolarPanelsLinks2.png";
+import SolarPanelsImg3 from "../../assets/icons/Education/SolarPanelsLinks3.png";
 
 interface EducationLinksProps {
   title: string;
@@ -79,7 +79,7 @@ export default function EducationalLinks() {
           <Link
             key={index}
             to={link.link}
-            className="snap-start shrink-0 w-[400px] aspect-[4/5] relative rounded-2xl overflow-hidden group"
+            className="snap-start shrink-0 w-100 aspect-4/5 relative rounded-2xl overflow-hidden group"
           >
             <img
               src={link.image}

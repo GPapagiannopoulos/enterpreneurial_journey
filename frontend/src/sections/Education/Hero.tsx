@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import solarPanelsEdu from "../../assets/icons/SolarPanelsEdu.png";
+import solarPanelsEdu from "../../assets/icons/Education/SolarPanelsEdu.png";
 
 export default function Hero() {
   return (

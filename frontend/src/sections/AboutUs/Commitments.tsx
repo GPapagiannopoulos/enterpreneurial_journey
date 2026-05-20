@@ -1,4 +1,4 @@
-import SolarPanel from "/src/assets/icons/SolarPanelsAboutUs.png";
+import SolarPanel from "/src/assets/icons/AboutUs/SolarPanelsAboutUs.png";
 
 export default function Commitments() {
   return (

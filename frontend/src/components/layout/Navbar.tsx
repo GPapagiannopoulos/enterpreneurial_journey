@@ -1,13 +1,13 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Button from "./Button";
+import Button from "../ui/Button";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
-import LogoIcon from "./icons/logo";
-import SolarPanel from "./icons/SolarPanel";
-import Storage from "./icons/Storage";
-import Wind from "./icons/Wind";
-import ChargingStation from "./icons/ChargingStation";
-import Windmill from "./icons/Windmill";
+import LogoIcon from "../icons/Navbar/logo";
+import SolarPanel from "../icons/Navbar/SolarPanel";
+import Storage from "../icons/Navbar/Storage";
+import Wind from "../icons/Navbar/Wind";
+import ChargingStation from "../icons/Navbar/ChargingStation";
+import Windmill from "../icons/Navbar/Windmill";
 
 export default function Navbar() {
   const location = useLocation();

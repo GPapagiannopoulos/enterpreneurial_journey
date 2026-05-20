@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import heroImage from "../../assets/icons/HeroImage.svg";
+import heroImage from "../../assets/icons/Hero/HeroImage.svg";
 
 export default function HeroSection() {
   const navigate = useNavigate();
@@ -11,11 +11,11 @@ export default function HeroSection() {
 
       <div className="mx-auto max-w-410 px-6 md:px-12 lg:px-35 py-12 md:py-20 lg:py-30">
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12">
-          <h1 className="lg:flex-[3] text-teal-950 font-bold font-['DM_Sans'] tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight lg:leading-[90px]">
+          <h1 className="lg:flex-3 text-teal-950 font-bold font-['DM_Sans'] tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight lg:leading-22.5">
             We make infrastructure investing accessible to everyone.
           </h1>
 
-          <div className="mt-8 lg:mt-0 lg:flex-[2] flex flex-col gap-16">
+          <div className="mt-8 lg:mt-0 lg:flex-2 flex flex-col gap-16">
             <p className="text-black font-medium font-['Inter'] tracking-tight text-lg md:text-xl lg:text-2xl leading-relaxed lg:leading-9">
               We connect people with institutional level infrastructure
               investments, making it accessible to everyone.

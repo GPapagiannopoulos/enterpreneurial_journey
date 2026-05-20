@@ -1,11 +1,11 @@
-import type { MemberCardProp } from "../../components/MemberCard";
-import Nektarios from "../../assets/icons/Nektarios.png";
-import Yuanzhen from "../../assets/icons/Yuanzhen.png";
-import Elias from "../../assets/icons/Elias.png";
-import Zainab from "../../assets/icons/Zainab.png";
-import China from "../../assets/icons/China.png";
-import George from "../../assets/icons/George.png";
-import MemberCard from "../../components/MemberCard";
+import type { MemberCardProp } from "../../components/ui/MemberCard";
+import Nektarios from "../../assets/icons/AboutUs/Nektarios.png";
+import Yuanzhen from "../../assets/icons/AboutUs/Yuanzhen.png";
+import Elias from "../../assets/icons/AboutUs/Elias.png";
+import Zainab from "../../assets/icons/AboutUs/Zainab.png";
+import China from "../../assets/icons/AboutUs/China.png";
+import George from "../../assets/icons/AboutUs/George.png";
+import MemberCard from "../../components/ui/MemberCard";
 
 const members: MemberCardProp[] = [
   {

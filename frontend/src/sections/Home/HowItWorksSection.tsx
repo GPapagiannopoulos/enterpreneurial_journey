@@ -1,8 +1,8 @@
-import StepsCard from "../../components/StepsCard";
-import type { StepsCardProps } from "../../components/StepsCard";
-import ListMagnifierGlass from "../../components/icons/ListMagnifierGlass";
-import Coins from "../../components/icons/Coins";
-import Hourglass from "../../components/icons/Hourglass";
+import StepsCard from "../../components/ui/StepsCard";
+import type { StepsCardProps } from "../../components/ui/StepsCard";
+import ListMagnifierGlass from "../../components/icons/Home/ListMagnifierGlass";
+import Coins from "../../components/icons/Home/Coins";
+import Hourglass from "../../components/icons/Home/Hourglass";
 import { Info } from "lucide-react";
 
 const steps: StepsCardProps[] = [

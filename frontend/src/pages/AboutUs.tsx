@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/Navbar";
 import Commitments from "../sections/AboutUs/Commitments";
 import MeetTheTeam from "../sections/AboutUs/MeetTheTeam";
 
