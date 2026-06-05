@@ -1,3 +1,4 @@
+import Footer from "../../components/layout/Mobile/Footer";
 import Navbar from "../../components/layout/Mobile/Navbar";
 import CTASection from "../../sections/Home/Mobile/CTASection";
 import HeroSection from "../../sections/Home/Mobile/HeroSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <HowItWorksSection />
       <WhyNoverta />
       <CTASection />
+      <Footer />
     </section>
   );
 }
