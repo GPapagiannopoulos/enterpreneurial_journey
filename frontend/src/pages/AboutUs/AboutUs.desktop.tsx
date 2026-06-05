@@ -1,7 +1,7 @@
-import Footer from "../../components/layout/Footer";
-import Navbar from "../../components/layout/Navbar";
-import Commitments from "../../sections/AboutUs/Commitments";
-import MeetTheTeam from "../../sections/AboutUs/MeetTheTeam";
+import Footer from "../../components/layout/Desktop/Footer";
+import Navbar from "../../components/layout/Desktop/Navbar";
+import Commitments from "../../sections/AboutUs/Desktop/Commitments";
+import MeetTheTeam from "../../sections/AboutUs/Desktop/MeetTheTeam";
 
 export default function AboutUs() {
   return (

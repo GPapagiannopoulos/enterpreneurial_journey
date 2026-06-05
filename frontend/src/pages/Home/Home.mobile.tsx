@@ -1,3 +1,9 @@
+import Navbar from "../../components/layout/Mobile/Navbar";
+
 export default function Home() {
-  return <section></section>;
+  return (
+    <section>
+      <Navbar />
+    </section>
+  );
 }

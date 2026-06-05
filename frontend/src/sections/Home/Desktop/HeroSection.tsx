@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import heroImage from "../../assets/icons/Hero/HeroImage.svg";
+import heroImage from "../../../assets/icons/Hero/HeroImage.svg";
 
 export default function HeroSection() {
   const navigate = useNavigate();

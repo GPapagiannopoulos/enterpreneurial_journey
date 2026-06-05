@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoIcon from "../icons/Navbar/logo";
+import LogoIcon from "../../icons/Navbar/logo";
 
 export default function Footer() {
   return (

@@ -1,10 +1,10 @@
 import { useState, type SubmitEventHandler } from "react";
-import InputField from "../../components/ui/InputField";
+import InputField from "../../../components/ui/InputField";
 import { useLocation, useNavigate } from "react-router-dom";
-import type { registrationPayload } from "../../api/types";
-import { registerInterest } from "../../api/auth";
-import logo from "../../assets/icons/Navbar/Logo.svg";
-import waitlistImage from "../../assets/icons/ContactUs/WindTurbine.png";
+import type { registrationPayload } from "../../../api/types";
+import { registerInterest } from "../../../api/auth";
+import logo from "../../../assets/icons/Navbar/Logo.svg";
+import waitlistImage from "../../../assets/icons/ContactUs/WindTurbine.png";
 
 export default function ContactForm() {
   const navigate = useNavigate();

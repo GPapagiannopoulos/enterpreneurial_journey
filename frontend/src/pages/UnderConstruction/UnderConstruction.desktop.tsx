@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Footer from "../../components/layout/Footer";
-import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Desktop/Footer";
+import Navbar from "../../components/layout/Desktop/Navbar";
 import Button from "../../components/ui/Button";
 
 export default function UnderConstruction() {

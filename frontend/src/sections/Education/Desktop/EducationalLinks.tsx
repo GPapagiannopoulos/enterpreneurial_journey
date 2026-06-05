@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import SolarPanelsImg1 from "../../assets/icons/Education/SolarPanelsLinks1.png";
-import SolarPanelsImg2 from "../../assets/icons/Education/SolarPanelsLinks2.png";
-import SolarPanelsImg3 from "../../assets/icons/Education/SolarPanelsLinks3.png";
+import SolarPanelsImg1 from "../../../assets/icons/Education/SolarPanelsLinks1.png";
+import SolarPanelsImg2 from "../../../assets/icons/Education/SolarPanelsLinks2.png";
+import SolarPanelsImg3 from "../../../assets/icons/Education/SolarPanelsLinks3.png";
 
 interface EducationLinksProps {
   title: string;
