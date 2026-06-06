@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.tsx";
-import ContactUs from "./pages/ContactUs.tsx";
-import UnderConstruction from "./pages/UnderConstruction.tsx";
-import AboutUs from "./pages/AboutUs.tsx";
-import Education from "./pages/Education.tsx";
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
+import UnderConstruction from "./pages/UnderConstruction";
+import AboutUs from "./pages/AboutUs";
+import Education from "./pages/Education";
 
 export default function App() {
   return (
