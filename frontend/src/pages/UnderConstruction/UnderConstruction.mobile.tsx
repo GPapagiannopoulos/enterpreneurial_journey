@@ -1,3 +1,28 @@
+import { useNavigate } from "react-router-dom";
+import Footer from "../../components/layout/Mobile/Footer";
+import Navbar from "../../components/layout/Mobile/Navbar";
+import Button from "../../components/ui/Button";
+
 export default function UnderConstruction() {
-  return <section></section>;
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen px-5.5 flex flex-col">
+      <Navbar />
+      <div className="flex-1 flex flex-col items-center justify-center text-center gap-6">
+        <h1 className="text-5xl font-bold font-raleway text-black">
+          Coming <span className="text-green-700">Soon</span>
+        </h1>
+        <p className="text-neutral-500 text-base font-inter max-w-xs">
+          We're still building this page. Check back soon.
+        </p>
+        <Button
+          label="Back to Home"
+          variant="secondary"
+          onClick={() => navigate("/")}
+        />
+      </div>
+      <Footer />
+    </div>
+  );
 }

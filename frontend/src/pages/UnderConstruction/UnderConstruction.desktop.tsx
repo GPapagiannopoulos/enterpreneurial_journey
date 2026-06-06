@@ -18,7 +18,7 @@ export default function UnderConstruction() {
         </p>
         <Button
           label="Back to Home"
-          variant="primary"
+          variant="secondary"
           onClick={() => navigate("/")}
         />
       </div>
